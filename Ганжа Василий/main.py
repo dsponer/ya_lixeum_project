@@ -23,7 +23,7 @@ class Main_Window(QMainWindow, Ui_MainWindow):
         self.statusBar.removeWidget(self.labell)
         self.statusBar.setStyleSheet('background: pink;')
         self.close()
-        os.system('python qt5.py')
+        os.system('python sup.py')
 
     def set_image_di(self):
         self.statusBar.removeWidget(self.labell)
