@@ -171,16 +171,16 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1259, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.statusBar = QtWidgets.QStatusBar(MainWindow)
-        self.statusBar.setObjectName("statusBar")
-        MainWindow.setStatusBar(self.statusBar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Tamplater"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Templater"))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_6.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_5.setText(_translate("MainWindow", "PushButton"))
@@ -189,8 +189,8 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.label.setText(_translate("MainWindow", "Ready Templates"))
         self.label_2.setText(_translate("MainWindow", "Preview"))
-        self.pushButton_10.setText(_translate("MainWindow", "Edit tamplate"))
-        self.pushButton_11.setText(_translate("MainWindow", "Add Tamplate"))
+        self.pushButton_10.setText(_translate("MainWindow", "Edit template"))
+        self.pushButton_11.setText(_translate("MainWindow", "Add New Template"))
         self.pushButton_8.setText(_translate("MainWindow", "Change mode"))
         self.pushButton_7.setText(_translate("MainWindow", "Download .py"))
         self.pushButton_9.setText(_translate("MainWindow", "Download .ui"))
