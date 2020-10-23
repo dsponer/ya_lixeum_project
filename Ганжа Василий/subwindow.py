@@ -347,7 +347,7 @@ class Ui_MainWindow(object):
         self.pushButton_46.setText(_translate("MainWindow", "OpenGL Widget"))
         self.label.setText(_translate("MainWindow", "Widgets"))
         self.label_2.setText(_translate("MainWindow", " Widget edit field"))
-        self.pushButton_51.setText(_translate("MainWindow", "Add to Tamplate"))
+        self.pushButton_51.setText(_translate("MainWindow", "Add to Template"))
         self.pushButton_61.setText(_translate("MainWindow", "Change mode"))
 
 
