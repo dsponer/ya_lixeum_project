@@ -1,6 +1,6 @@
 import sys
 import os
-from test1 import Ui_MainWindow
+from subwindow import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 
@@ -15,7 +15,7 @@ class Alternative_Window(QMainWindow, Ui_MainWindow):
 
     def change_mode(self):
         self.close()
-        os.system('python check_.py')
+        os.system('python main.py')
 
 
 if __name__ == '__main__':
