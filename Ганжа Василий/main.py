@@ -13,7 +13,7 @@ class Main_Window(QMainWindow, Ui_MainWindow):
         self.initUI()
 
     def initUI(self):
-        self.pixlist = {}
+        self.pixdict = {self.pushButton_2: ['Template_project\Screens\di.JPG', 'E:\PycharmProject\PyQt5\Template_project\Templates\screen.py']}
         self.labell = QLabel(self)
         self.pushButton_8.clicked.connect(self.change_mode)
         self.pushButton_2.clicked.connect(self.set_image_di)
@@ -30,8 +30,8 @@ class Main_Window(QMainWindow, Ui_MainWindow):
     def set_image_di(self):
         self.statusbar.removeWidget(self.labell)
         self.statusbar.setStyleSheet('background: pink;')
-        self.pixmap = QPixmap('Template_project\Screens\di.JPG')
-        print(self.pixmap)
+        self.img_path, self.file_path = self.pixdict[self.sender()]
+        self.pixmap = QPixmap(self.img_path)
         self.label_3.setPixmap(self.pixmap)
 
     def py_download(self):
@@ -41,7 +41,7 @@ class Main_Window(QMainWindow, Ui_MainWindow):
                                                 "What the path?")
         if ok_pressed:
             try:
-                shutil.copy('Template_project\Templates\screen.py', name)
+                shutil.copy(self.file_path, name)
             except shutil.SameFileError:
                 self.labell.setText('The Same Files <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
                 self.statusbar.setStyleSheet('background: red;')
