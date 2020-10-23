@@ -1,7 +1,7 @@
 import sys
 import os
 from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog, QLabel
-from test import Ui_MainWindow
+from main_window import Ui_MainWindow
 from PyQt5.QtGui import QPixmap
 import shutil
 
