@@ -13,45 +13,47 @@ class Main_Window(QMainWindow, Ui_MainWindow):
         self.initUI()
 
     def initUI(self):
+        self.pixlist = {}
+        self.labell = QLabel(self)
         self.pushButton_8.clicked.connect(self.change_mode)
         self.pushButton_2.clicked.connect(self.set_image_di)
         self.pushButton_7.clicked.connect(self.py_download)
-        self.statusBar.setStyleSheet('background: pink;')
-        self.labell = QLabel(self)
+        self.statusbar.setStyleSheet('background: pink;')
+
 
     def change_mode(self):
-        self.statusBar.removeWidget(self.labell)
-        self.statusBar.setStyleSheet('background: pink;')
+        self.statusbar.removeWidget(self.labell)
+        self.statusbar.setStyleSheet('background: pink;')
         self.close()
         os.system('python sup.py')
 
     def set_image_di(self):
-        self.statusBar.removeWidget(self.labell)
-        self.statusBar.setStyleSheet('background: pink;')
-        self.pixmap = QPixmap('di.JPG')
+        self.statusbar.removeWidget(self.labell)
+        self.statusbar.setStyleSheet('background: pink;')
+        self.pixmap = QPixmap('Template_project\Screens\di.JPG')
         print(self.pixmap)
         self.label_3.setPixmap(self.pixmap)
 
     def py_download(self):
-        self.statusBar.removeWidget(self.labell)
-        self.statusBar.setStyleSheet('background: pink;')
+        self.statusbar.removeWidget(self.labell)
+        self.statusbar.setStyleSheet('background: pink;')
         name, ok_pressed = QInputDialog.getText(self, "Enter the path to the directory",
                                                 "What the path?")
         if ok_pressed:
             try:
-                shutil.copy('screen.py', name)
+                shutil.copy('Template_project\Templates\screen.py', name)
             except shutil.SameFileError:
-                self.labell.setText('The Same Files -----------------------------------------------------')
-                self.statusBar.setStyleSheet('background: red;')
-                self.statusBar.addWidget(self.labell)
+                self.labell.setText('The Same Files <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+                self.statusbar.setStyleSheet('background: red;')
+                self.statusbar.addWidget(self.labell)
             except FileNotFoundError:
-                self.labell.setText('File Not Found -----------------------------------------------------')
-                self.statusBar.setStyleSheet('background: red;')
-                self.statusBar.addWidget(self.labell)
+                self.labell.setText('File Not Found <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+                self.statusbar.setStyleSheet('background: red;')
+                self.statusbar.addWidget(self.labell)
             except Exception:
-                self.labell.setText('Error -----------------------------------------------------')
-                self.statusBar.setStyleSheet('background: red;')
-                self.statusBar.addWidget(self.labell)
+                self.labell.setText('Error <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+                self.statusbar.setStyleSheet('background: red;')
+                self.statusbar.addWidget(self.labell)
 
 
 if __name__ == '__main__':
