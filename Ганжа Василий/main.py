@@ -27,6 +27,12 @@ class Main_Window(QMainWindow, Ui_MainWindow):
         self.close()
         os.system('python sup.py')
 
+    def ui_download(self):
+        pass
+
+    def add_new_tamplate(self):
+        pass
+
     def set_image_di(self):
         self.statusbar.removeWidget(self.labell)
         self.statusbar.setStyleSheet('background: pink;')
