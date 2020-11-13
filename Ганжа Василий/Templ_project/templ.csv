@@ -1,0 +1,8 @@
+key_btn;img_path;py_path;ui_path
+Lines_and_but;Screens\lines_with_buttn_between.JPG;py_files\lines_w_buttn_between.py;py_files\yi_files\lines_w_buttn_between.ui
+Calculator;Screens\calculator.JPG;py_files\calculator.py;py_files\yi_files\calculator.ui
+CalendarBook;Screens\clndr_notebook.JPG;py_files\clndr_notebook.py;py_files\yi_files\clndr_notebook.ui
+ButBox_bottom;Screens\dialog_with_buttons_bottom.JPG;py_files\dialog_with_buttons_bottom.py;py_files\yi_files\dialog_with_buttons_bottom.ui
+Image_Editor;Screens\image_editor.JPG;py_files\image_editor.py;py_files\yi_files\image_editor.ui
+NoteBook;Screens\notebook.JPG;py_files\notebook.py;py_files\yi_files\notebook.ui
+Receipt;Screens\receipt.JPG;py_files\receipt.py;py_files\yi_files\receipt.ui
